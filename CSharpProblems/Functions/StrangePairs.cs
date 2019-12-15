@@ -1,4 +1,5 @@
 ﻿using System;
+using CSharpProblems.Utilities;
 
 namespace CSharpProblems.Functions
 {
@@ -6,7 +7,8 @@ namespace CSharpProblems.Functions
     {
         public static void RunIsStrangeStringPair()
         {
-            while (keepGoing == "Yes" || keepGoing == "yes")
+            
+            while (KeepGoing == "yes")
             {
                 Console.WriteLine("This program will help you find strange string pairs!");
                 Console.WriteLine("What is the first word?");
@@ -17,7 +19,9 @@ namespace CSharpProblems.Functions
                 Console.WriteLine(IsStrangeStringPair(firstString, secondString));
 
                 Console.WriteLine("Do you have more words to compare?");
-                keepGoing = Console.ReadLine();
+                KeepGoing = Console.ReadLine().ToLower();              
+
+                NavigatorUtility.Navigate();
             }
         }
 

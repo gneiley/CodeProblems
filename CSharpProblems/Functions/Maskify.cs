@@ -1,4 +1,5 @@
 ﻿using System;
+using CSharpProblems.Utilities;
 
 namespace CSharpProblems.Functions
 {
@@ -6,7 +7,7 @@ namespace CSharpProblems.Functions
     {
         public static void RunMaskifyNumbers()
         {
-            while (keepGoing == "yes")
+            while (KeepGoing == "yes")
             {
                 Console.WriteLine("This program will help you mask strings longer than 4 chars");
                 Console.WriteLine("Please type the string you would like to mask, then press enter.");
@@ -15,8 +16,9 @@ namespace CSharpProblems.Functions
                 Console.WriteLine(MaskifyNumbers(inputString));
 
                 Console.WriteLine("Would you like to mask another string?");
-                keepGoing = Console.ReadLine();
-                keepGoing.ToLower();
+                KeepGoing = Console.ReadLine().ToLower();
+
+                NavigatorUtility.Navigate();
             }
         }
 

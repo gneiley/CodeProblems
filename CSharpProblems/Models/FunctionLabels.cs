@@ -1,6 +1,6 @@
 ﻿namespace CSharpProblems.Models
 {
-    public enum Methods
+    public enum FunctionLabels
     {
         CheckForStrangeStringPair = 1,
         MaskNumberString = 2,

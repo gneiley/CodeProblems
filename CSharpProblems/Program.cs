@@ -9,15 +9,27 @@ namespace CSharpProblems
     {
         static void Main(string[] args)
         {
+            while(ReturnToMenu == "yes")
+            {
+                SelectAndRunProgram();
+            }
+        }
+
+        public static void SelectAndRunProgram()
+        {
+            KeepGoing = "yes";
+
             Console.WriteLine("What program would you like to run?\n" +
-                "Please type the number associated to the action you'd like, and press Enter.\n" +
+                "Please type the number associated to the program you'd like to use, and press Enter.\n" +
                 $"{StrangePairsInt} = {StrangePairString}\n" +
                 $"{MaskifyInt} = {MaskifyString}"
                 );
+
             string input = Console.ReadLine();
 
-            Methods method = input == StrangePairsInt.ToString() ? Methods.CheckForStrangeStringPair :
-                input == MaskifyInt.ToString() ? Methods.MaskNumberString : Methods.IncorrectInput;
+            
+            FunctionLabels method = input == StrangePairsInt.ToString() ? FunctionLabels.CheckForStrangeStringPair :
+                input == MaskifyInt.ToString() ? FunctionLabels.MaskNumberString : FunctionLabels.IncorrectInput;
 
             switch ((int)method)
             {
@@ -32,7 +44,8 @@ namespace CSharpProblems
                 default:
                     Console.WriteLine(StringFormattingUtility.AddSpacesToString(method.ToString()));
                     break;
-           }            
+            }
+
         }
     }
 }      
