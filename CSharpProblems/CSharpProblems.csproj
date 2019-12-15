@@ -44,10 +44,11 @@
   <ItemGroup>
     <Compile Include="BaseClass.cs" />
     <Compile Include="Functions\Maskify.cs" />
-    <Compile Include="Models\Methods.cs" />
+    <Compile Include="Models\FunctionLabels.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Functions\StrangePairs.cs" />
+    <Compile Include="Utilities\NavigatorUtility.cs" />
     <Compile Include="Utilities\StringFormattingUtility.cs" />
   </ItemGroup>
   <ItemGroup>
