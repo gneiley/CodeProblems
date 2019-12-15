@@ -19,8 +19,7 @@ namespace CSharpProblems.Functions
                 Console.WriteLine(IsStrangeStringPair(firstString, secondString));
 
                 Console.WriteLine("Do you have more words to compare?");
-                KeepGoing = Console.ReadLine();
-                KeepGoing.ToLower();
+                KeepGoing = Console.ReadLine().ToLower();              
 
                 NavigatorUtility.Navigate();
             }

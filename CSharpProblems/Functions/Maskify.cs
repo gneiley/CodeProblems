@@ -16,8 +16,7 @@ namespace CSharpProblems.Functions
                 Console.WriteLine(MaskifyNumbers(inputString));
 
                 Console.WriteLine("Would you like to mask another string?");
-                KeepGoing = Console.ReadLine();
-                KeepGoing.ToLower();
+                KeepGoing = Console.ReadLine().ToLower();
 
                 NavigatorUtility.Navigate();
             }
