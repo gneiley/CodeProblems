@@ -16,11 +16,7 @@ namespace CSharpProblems.Functions
                 Console.WriteLine("What is the second word");
                 string secondString = Console.ReadLine();
 
-                Console.WriteLine(IsStrangeStringPair(firstString, secondString));
-
-                Console.WriteLine("Do you have more words to compare?");
-                KeepGoing = Console.ReadLine().ToLower();              
-
+                Console.WriteLine(IsStrangeStringPair(firstString, secondString));                     
                 NavigatorUtility.Navigate();
             }
         }

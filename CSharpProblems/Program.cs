@@ -22,16 +22,11 @@ namespace CSharpProblems
             Console.WriteLine("What program would you like to run?\n" +
                 "Please type the number associated to the program you'd like to use, and press Enter.\n" +
                 $"{StrangePairsInt} = {StrangePairString}\n" +
-                $"{MaskifyInt} = {MaskifyString}"
+                $"{MaskifyInt} = {MaskifyString}\n" +
+                $"{FilterArrayInt} = {FilterArrayString}"
                 );
 
-            string input = Console.ReadLine();
-
-            
-            FunctionLabels method = input == StrangePairsInt.ToString() ? FunctionLabels.CheckForStrangeStringPair :
-                input == MaskifyInt.ToString() ? FunctionLabels.MaskNumberString : FunctionLabels.IncorrectInput;
-
-            switch ((int)method)
+            switch (InputConverter.ConvertMainMenuChoice())
             {
                 case 1:
                     StrangePairs.RunIsStrangeStringPair();
@@ -41,8 +36,12 @@ namespace CSharpProblems
                     Maskify.RunMaskifyNumbers();
                     break;
 
+                case 3:
+                    FilterArray.RunFilterArray();
+                    break;
+
                 default:
-                    Console.WriteLine(StringFormattingUtility.AddSpacesToString(method.ToString()));
+                    Console.WriteLine("Error");
                     break;
             }
 

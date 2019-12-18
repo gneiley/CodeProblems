@@ -4,6 +4,7 @@
     {
         CheckForStrangeStringPair = 1,
         MaskNumberString = 2,
-        IncorrectInput = 3
+        FilterOutStringsFromAnArray = 3,
+        IncorrectInput = 4
     }
 }
